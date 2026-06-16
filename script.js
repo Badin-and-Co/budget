@@ -254,8 +254,12 @@ function updateSummary() {
   const grandPaid = wedding.paid + honeymoon.paid;
   const grandLeft = grandTotal - grandPaid;
 
-  document.getElementById("weddingTotal").textContent = formatMoney(wedding.total);
-  document.getElementById("honeymoonTotal").textContent = formatMoney(honeymoon.total);
+  const weddingTotalEl = document.getElementById("weddingTotal");
+  const honeymoonTotalEl = document.getElementById("honeymoonTotal");
+
+  if (weddingTotalEl) weddingTotalEl.textContent = formatMoney(wedding.total);
+  if (honeymoonTotalEl) honeymoonTotalEl.textContent = formatMoney(honeymoon.total);
+
   document.getElementById("paidTotal").textContent = formatMoney(grandPaid);
   document.getElementById("leftTotal").textContent = formatMoney(grandLeft);
 
