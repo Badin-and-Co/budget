@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #fffaf3;
+  color: #3f4a32;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 35px;
+  background: linear-gradient(135deg, #f3e7d6, #fffaf3);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #8b6f4e;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.date {
+  font-size: 16px;
+  color: #6f7f55;
+}
+
+main {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 30px 0 60px;
+}
+
+.month-line-section {
+  margin-bottom: 26px;
+}
+
+.month-line {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 14px 4px 18px;
+  font-size: 14px;
+  border-bottom: 1px solid #dfc8a9;
+  border-top: 1px solid #dfc8a9;
+}
+
+.month-line-item {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 155px;
+  text-align: center;
+  white-space: nowrap;
+  color: #3f4a32;
+  padding: 0 18px;
+}
+
+.month-line-item::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  width: 36px;
+  height: 1px;
+  background: #c5a77d;
+}
+
+.month-line-item:last-child::after {
+  display: none;
+}
+
+.month-line-dot {
+  width: 10px;
+  height: 10px;
+  background: #6f7f55;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+}
+
+.month-line-item strong {
+  color: #844b5c;
+}
+
+.month-line-item span {
+  color: #8b6f4e;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.top-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.top-summary div,
+.summary-card {
+  background: white;
+  border: 1px solid #dfc8a9;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(63, 74, 50, 0.08);
+}
+
+.top-summary span {
+  display: block;
+  font-size: 13px;
+  color: #8b6f4e;
+  margin-bottom: 8px;
+}
+
+.top-summary strong {
+  font-size: 24px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 25px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #c5a77d;
+}
+
+.month-block {
+  position: relative;
+  margin-bottom: 35px;
+  background: #ffffff;
+  border: 1px solid #dfc8a9;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(63, 74, 50, 0.08);
+}
+
+.month-block::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  background: #6f7f55;
+  border-radius: 50%;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  padding: 25px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.month-header::-webkit-details-marker {
+  display: none;
+}
+
+.month-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.click-note {
+  font-size: 13px;
+  color: #6f7f55;
+  margin-top: 4px;
+}
+
+.month-total {
+  font-weight: bold;
+  color: #844b5c;
+  text-align: right;
+}
+
+.month-subtotal {
+  font-size: 13px;
+  font-weight: normal;
+  color: #6f7f55;
+  margin-top: 4px;
+}
+
+.month-content {
+  padding: 0 25px 10px;
+  border-top: 1px solid #f3e7d6;
+}
+
+.payment-item {
+  display: grid;
+  grid-template-columns: 35px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px solid #f3e7d6;
+}
+
+.payment-item:last-child {
+  border-bottom: none;
+}
+
+.payment-item input {
+  width: 20px;
+  height: 20px;
+  accent-color: #6f7f55;
+  margin-top: 4px;
+}
+
+.payment-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.payment-details {
+  font-size: 14px;
+  color: #6f7f55;
+  margin-top: 4px;
+}
+
+.category {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: #f3e7d6;
+  color: #5b3a3f;
+}
+
+.amount {
+  font-weight: bold;
+  color: #3f4a32;
+  white-space: nowrap;
+}
+
+.tbd {
+  color: #8b6f4e;
+  font-style: italic;
+}
+
+.paid .payment-title,
+.paid .payment-details,
+.paid .amount {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.final-summary {
+  margin-top: 50px;
+}
+
+.final-summary h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.summary-card h3 {
+  margin-top: 0;
+  color: #844b5c;
+}
+
+.total-card {
+  border-color: #6f7f55;
+}
+
+@media (max-width: 900px) {
+  .top-summary,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .month-line {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .payment-item {
+    grid-template-columns: 30px 1fr;
+  }
+
+  .amount {
+    grid-column: 2;
+  }
+
+  .month-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .month-total {
+    text-align: left;
+  }
+}
+
+
+.month-block.month-paid .month-header h2,
+.month-block.month-paid .month-total {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.month-block.month-paid .click-note,
+.month-block.month-paid .month-subtotal {
+  opacity: 0.55;
+}

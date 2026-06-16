@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Payment Timeline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">Wedding </p>
+    <h1>Payment Timeline</h1>
+    <p class="date">February 25, 2027</p>
+  </header>
+
+  <main>
+    <section class="month-line-section">
+      <div class="month-line" id="monthLine"></div>
+    </section>
+
+    <section class="top-summary">
+      <div>
+        <span>Wedding Total</span>
+        <strong id="weddingTotal">$0</strong>
+      </div>
+      <div>
+        <span>Honeymoon Total</span>
+        <strong id="honeymoonTotal">$0</strong>
+      </div>
+      <div>
+        <span>Amount Paid</span>
+        <strong id="paidTotal">$0</strong>
+      </div>
+      <div>
+        <span>Amount Left</span>
+        <strong id="leftTotal">$0</strong>
+      </div>
+    </section>
+
+    <section class="timeline" id="timeline"></section>
+
+    <section class="final-summary">
+      <h2>Final Summary</h2>
+
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>Wedding</h3>
+          <p>Total Budgeted: <strong id="summaryWeddingTotal">$0</strong></p>
+          <p>Paid: <strong id="summaryWeddingPaid">$0</strong></p>
+          <p>To Be Paid: <strong id="summaryWeddingLeft">$0</strong></p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Honeymoon</h3>
+          <p>Total Budgeted: <strong id="summaryHoneymoonTotal">$0</strong></p>
+          <p>Paid: <strong id="summaryHoneymoonPaid">$0</strong></p>
+          <p>To Be Paid: <strong id="summaryHoneymoonLeft">$0</strong></p>
+        </div>
+
+        <div class="summary-card total-card">
+          <h3>Everything</h3>
+          <p>Total Cost: <strong id="grandTotal">$0</strong></p>
+          <p>Amount Paid: <strong id="grandPaid">$0</strong></p>
+          <p>Amount Left: <strong id="grandLeft">$0</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
